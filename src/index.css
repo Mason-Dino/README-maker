@@ -1,7 +1,11 @@
+:root {
+    --burnt-sienna: #dd7765ff;
+    --pistachio: #8acb88ff;
+    --hookers-green: #648381ff;
+    --davys-gray: #575761ff;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-        Arial, sans-serif;
-    margin: auto;
-    max-width: 38rem;
-    padding: 2rem;
+    margin: 0px;
+    background-color: var(--davys-gray);
 }
