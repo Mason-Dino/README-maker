@@ -2,7 +2,7 @@
     --burnt-sienna: #dd7765ff;
     --pistachio: #8acb88ff;
     --hookers-green: #648381ff;
-    --davys-gray: #575761ff;
+    --davys-gray: rgb(59, 59, 65);
 }
 
 body {
@@ -14,4 +14,22 @@ h1 {
     font-family: "Roboto", sans-serif;
     color: var(--pistachio);
     text-align: center;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--hookers-green);
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--pistachio);
+    color: var(--davys-gray);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
 }
