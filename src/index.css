@@ -2,10 +2,11 @@
     --burnt-sienna: #dd7765ff;
     --pistachio: #8acb88ff;
     --hookers-green: #648381ff;
-    --davys-gray: rgb(59, 59, 65);
+    --davys-gray: rgb(51, 51, 56);
 }
 
 body {
+    display: flex;
     margin: 0px;
     background-color: var(--davys-gray);
 }
@@ -32,4 +33,9 @@ button {
     height: 40px;
     border: none;
     border-radius: 10px;
+}
+
+.welcome {
+    margin: auto;
+    background-color: var(--davys-gray);
 }
