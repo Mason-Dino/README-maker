@@ -9,3 +9,9 @@ body {
     margin: 0px;
     background-color: var(--davys-gray);
 }
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    color: var(--pistachio);
+    text-align: center;
+}
