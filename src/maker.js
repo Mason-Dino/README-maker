@@ -5,7 +5,7 @@ function addBuiltItem() {
     index += 1;
 
     buildList += `
-    <div class="built-list-child">
+    <div class="built-list-child" id="built-child-${index}">
         <label for="built-name-${index}">Name:</label><input type="text" id="built-name-${index}">
         <br>
         <label for="built-url-${index}">URL:</label><input type="text" id="built-url-${index}">
@@ -15,4 +15,8 @@ function addBuiltItem() {
     `
 
     document.getElementById("built-list").innerHTML = buildList;
+}
+
+function deleteBuiltItem() {
+    
 }
