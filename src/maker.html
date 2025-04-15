@@ -3,9 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>Hello World!</title>
-        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="maker.css" />
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="maker.js"></script> 
     </head>
     <body>
-        Hello
+        <h1>Readme<br>Maker</h1>
+        <div class="container">
+            <div class="edit">
+                <textarea id="edit" placeholder="Write your markdown here!"></textarea>
+            </div>
+            <div id="output" class="output">
+            </div>
+        </div>
     </body>
+    <script>
+        const input = document.getElementById('edit');
+        const output = document.getElementById('output');
+    
+        input.addEventListener('input', () => {
+            console.log("input");
+            output.innerHTML = marked.parse(input.value);
+        });
+    
+        // Initial render
+        output.innerHTML = marked.parse(input.value);
+    </script>
 </html>
