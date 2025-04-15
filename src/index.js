@@ -31,28 +31,51 @@ app.whenReady().then(() => {
 
     const menuTemplate = [
         {
-        label: 'File',
-        submenu: [
-            { label: 'Home', click: (menuItem, browserWindow) => { 
-                if (browserWindow) {
-                    browserWindow.loadFile(path.join(__dirname, 'index.html')); // <-- Your new page
-                } 
-            } },
-            { label: 'Save', click: () => { console.log('Save clicked'); } },
-            { type: 'separator' },
-            { label: 'Exit', role: 'quit' }
-        ]
+            label: 'File',
+            submenu: [
+                { label: 'Home', click: (menuItem, browserWindow) => { 
+                    if (browserWindow) {
+                        browserWindow.loadFile(path.join(__dirname, 'index.html')); // <-- Your new page
+                    } 
+                } },
+                { label: 'Save', click: () => { console.log('Save clicked'); } },
+                { type: 'separator' },
+                { label: 'Exit', role: 'quit' }
+            ]
         },
         {
-        label: 'Edit',
-        submenu: [
-            { role: 'undo' },
-            { role: 'redo' },
-            { type: 'separator' },
-            { role: 'cut' },
-            { role: 'copy' },
-            { role: 'paste' },
-        ]
+            label: 'Edit',
+            submenu: [
+                { role: 'undo' },
+                { role: 'redo' },
+                { type: 'separator' },
+                { role: 'cut' },
+                { role: 'copy' },
+                { role: 'paste' },
+            ]
+        },
+        {
+            label: 'Admin',
+            submenu: [
+                {
+                    label: 'Toggle DevTools',
+                    accelerator: 'Ctrl+Shift+I', // shortcut
+                    click: (menuItem, browserWindow) => {
+                        if (browserWindow) {
+                            browserWindow.webContents.toggleDevTools();
+                        }
+                    }
+                },
+                {
+                    label: 'Refresh',
+                    accelerator: 'Ctrl+Shift+R',
+                    click: (menuItem, browserWindow) => {
+                        if (browserWindow) {
+                            browserWindow.reload();
+                        }
+                    }
+                }
+            ]
         }
     ];
     
