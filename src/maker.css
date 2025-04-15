@@ -26,6 +26,17 @@ h1 {
     height: 100px;
 }
 
+.edit-child {
+    margin: auto;
+    background-color: var(--pistachio);
+    width: 90%;
+}
+
+.edit-child h3 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
 .output {
     width: 50%;
     background-color: var(--burnt-sienna);
