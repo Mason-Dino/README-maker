@@ -17,7 +17,7 @@
                 </div>
                 <div class="edit-child">
                     <h3>Title</h3>
-                    <label for="logo-url">Logo URL: </label><input id="logo-url" type="text">
+                    <label for="logo-url">Logo URL: </label><input id="logo-url" type="text" onkeyup="imgUpdate(this.id, 'logo')">
                     <br>
                     <label for="title">Title: </label><input id="title" type="text" onkeyup="textUpdate(this.id, 'title-out')">
                     <br>
@@ -98,7 +98,7 @@
                     <br/>
                         <div style="text-align: center;">
                             <a href="https://github.com/ShaanCoding/ReadME-Generator">
-                                <img src="https://picsum.photos/400" alt="Logo" width="80" height="80">
+                                <img id="logo" src="https://picsum.photos/400" alt="Logo" width="80" height="80">
                             </a>
                             <h3 style="text-align: center;" id="title-out">ReadME Generator</h3>
                             <p style="text-align: center;">
