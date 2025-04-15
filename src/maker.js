@@ -21,29 +21,6 @@ function deleteBuiltItem(id) {
     document.getElementById(id).remove()
 }
 
-const projectURL = document.getElementById("proj-url");
-const title = document.getElementById("title");
-const subtitle = document.getElementById("subtitle")
-const productURL = document.getElementById('product-url');
-/*
-projectURL.addEventListener('input', () => {
-    document.getElementById("issue-out").href = `${projectURL.value}/issues/new?labels=bug&template=bug-report---.md`;
-    document.getElementById("new-out").href = `${projectURL.value}/issues/new?labels=bug&template=bug-report---.md`;
-});
-
-title.addEventListener('input', () => {
-    document.getElementById("title-out").innerText = title.value;
-});
-
-subtitle.addEventListener('input', () => {
-    document.getElementById("catchphrase-out").innerHTML = subtitle.value;
-});
-
-productURL.addEventListener('input', () => {
-    console.log("ttest")
-    //document.getElementById("about-img-out").src = "https://cdn.discordapp.com/attachments/1341894044850327552/1361420865690144920/Potting_Event_SAB_2.png?ex=67feb17c&is=67fd5ffc&hm=72c9b16b53285a2afdcbcfc55bbe18b8749b9c13699d6f4e0284d0964f2fc4fb&";
-});
-*/
 function textUpdate(input, output) {
     document.getElementById(output).innerText = document.getElementById(input).value;
 }
