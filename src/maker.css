@@ -29,12 +29,15 @@ h1 {
     margin: auto;
     margin-bottom: 20px;
     background-color: var(--pistachio);
+    border-radius: 10px;
+    padding: 10px;
     width: 90%;
 }
 
 .edit-child h3 {
     text-align: center;
     font-family: "Roboto", sans-serif;
+    margin-top: 0px;
 }
 
 .edit-child h4 {
@@ -49,7 +52,7 @@ h1 {
 }
 
 .built-list-child {
-    
+
 }
 
 .output {
