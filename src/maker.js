@@ -22,5 +22,9 @@ function deleteBuiltItem(id) {
 }
 
 function textUpdate(input, output) {
-    document.getElementById(output).innerText = document.getElementById(input).value;
+    document.getElementById(output).innerHTML = document.getElementById(input).value;
+}
+
+function imgUpdate(input, output) {
+    document.getElementById(output).src = document.getElementById(input).value;
 }
