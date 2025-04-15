@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('node:path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -12,7 +12,7 @@ const createWindow = () => {
         width: 1000,
         height: 700,
         webPreferences: {
-        preload: path.join(__dirname, 'preload.js'),
+            preload: path.join(__dirname, 'preload.js'),
         },
     });
 
@@ -28,6 +28,36 @@ const createWindow = () => {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
     createWindow();
+
+    const menuTemplate = [
+        {
+        label: 'File',
+        submenu: [
+            { label: 'Home', click: (menuItem, browserWindow) => { 
+                if (browserWindow) {
+                    browserWindow.loadFile(path.join(__dirname, 'index.html')); // <-- Your new page
+                } 
+            } },
+            { label: 'Save', click: () => { console.log('Save clicked'); } },
+            { type: 'separator' },
+            { label: 'Exit', role: 'quit' }
+        ]
+        },
+        {
+        label: 'Edit',
+        submenu: [
+            { role: 'undo' },
+            { role: 'redo' },
+            { type: 'separator' },
+            { role: 'cut' },
+            { role: 'copy' },
+            { role: 'paste' },
+        ]
+        }
+    ];
+    
+    const menu = Menu.buildFromTemplate(menuTemplate);
+    Menu.setApplicationMenu(menu); // Sets the menu on the application
 
     // On OS X it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
