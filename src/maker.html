@@ -27,7 +27,7 @@
                     <h3>About the Project</h3>
                     <label for="product-url">Product URL:</label><input id="product-url" type="text" onkeyup="imgUpdate(this.id, 'about-img-out')">
                     <label>Description: </label><br>
-                    <textarea id="project-description"></textarea>
+                    <textarea id="project-description" onkeyup="mdUpdate(this.id, 'about-desc-out')"></textarea>
                     <br>
                 </div>
                 <div class="edit-child">
@@ -115,6 +115,7 @@
                 <section id="about">
                     <h4>About The Project</h4>
                     <img src="https://picsum.photos/1920/1080" id="about-img-out" style="width: 95%; height: 95;">
+                    <div id="about-desc-out"></div>
                 </section>
             </div>
         </div>

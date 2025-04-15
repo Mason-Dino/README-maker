@@ -28,3 +28,7 @@ function textUpdate(input, output) {
 function imgUpdate(input, output) {
     document.getElementById(output).src = document.getElementById(input).value;
 }
+
+function mdUpdate(input, output) {
+    document.getElementById(output).innerHTML = marked.parse(document.getElementById(input).value);
+}
