@@ -43,3 +43,7 @@ function imgUpdate(input, output) {
 function mdUpdate(input, output) {
     document.getElementById(output).innerHTML = marked.parse(document.getElementById(input).value);
 }
+
+function linkUpdate(input, output) {
+    document.getElementById(output).href = document.getElementById(input).value;
+}
