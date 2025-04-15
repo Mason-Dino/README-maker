@@ -13,13 +13,13 @@
             <div class="edit">
                 <div class="edit-child">
                     <h3>Config</h3>
-                    <label for="proj-url">Project URL: </label><input id="proj-url" type="text"></label>
+                    <label for="proj-url">Project URL: </label><input id="proj-url" type="text" value="https://github.com/Mason-Dino/README-maker"></label>
                 </div>
                 <div class="edit-child">
                     <h3>Title</h3>
                     <label for="logo-url">Logo URL: </label><input id="logo-url" type="text">
                     <br>
-                    <label for="title">Title: </label><input id="title" type="text">
+                    <label for="title">Title: </label><input id="title" type="text" onkeyup="textUpdate(this.id, 'title-out')">
                     <br>
                     <label for="subtitle">Subtitle: </label><input id="subtitle" type="text">
                 </div>
@@ -113,33 +113,10 @@
                         </div>
                 </header>
                 <section id="about">
-                    
+                    <h4>About The Project</h4>
+                    <img src="https://picsum.photos/1920/1080" id="about-img-out" style="width: 95%; height: 95;">
                 </section>
             </div>
         </div>
     </body>
-    <script>
-        const projectURL = document.getElementById("proj-url");
-        const title = document.getElementById("title");
-        const subtitle = document.getElementById("subtitle")
-        const output = document.getElementById('output');
-
-        projectURL.addEventListener('input', () => {
-            document.getElementById("issue-out").href = `${projectURL.value}/issues/new?labels=bug&template=bug-report---.md`;
-            document.getElementById("new-out").href = `${projectURL.value}/issues/new?labels=bug&template=bug-report---.md`;
-        });
-    
-        title.addEventListener('input', () => {
-            document.getElementById("title-out").innerText = title.value;
-        });
-
-        subtitle.addEventListener('input', () => {
-            document.getElementById("catchphrase-out").innerHTML = subtitle.value;
-        });
-    
-        // Initial render
-        console.log(output.innerHTML)
-        output.innerHTML = marked.parse(output.value);
-        console.log("init");
-    </script>
 </html>
