@@ -23,11 +23,11 @@ h1 {
 .edit {
     width: 50%;
     background-color: var(--hookers-green);
-    height: 100px;
 }
 
 .edit-child {
     margin: auto;
+    margin-bottom: 20px;
     background-color: var(--pistachio);
     width: 90%;
 }
@@ -35,6 +35,13 @@ h1 {
 .edit-child h3 {
     text-align: center;
     font-family: "Roboto", sans-serif;
+}
+
+.edit-child label {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin-right: 20px;
 }
 
 .output {
