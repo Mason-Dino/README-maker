@@ -37,11 +37,19 @@ h1 {
     font-family: "Roboto", sans-serif;
 }
 
+.edit-child h4 {
+    font-family: "Roboto", sans-serif;
+}
+
 .edit-child label {
     display: inline-block;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     margin-right: 20px;
+}
+
+.built-list-child {
+    
 }
 
 .output {
