@@ -21,6 +21,17 @@ function deleteBuiltItem(id) {
     document.getElementById(id).remove()
 }
 
+function updateBuilt() {
+    let list = ``
+    for (let i = 1; i <= index; i ++) {
+        console.log(document.getElementById(`built-child-${i}`))
+        if (document.getElementById(`built-child-${i}`) != undefined) {
+            list += `<li><a href="${document.getElementById('built-url-' + String(i)).value}">${document.getElementById('built-name-' + String(i)).value}</a></li>`
+        }
+    }
+    document.getElementById("built-list-out").innerHTML = list;
+}
+
 function textUpdate(input, output) {
     document.getElementById(output).innerHTML = document.getElementById(input).value;
 }
