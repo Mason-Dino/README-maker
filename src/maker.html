@@ -69,12 +69,15 @@ This section should list any major frameworks/libraries used to bootstrap your p
                 <div class="edit-child">
                     <h3>Getting Started</h3>
                     <label>Description: </label><br>
-                    <textarea id="started-description"></textarea>
+                    <textarea id="started-description" onkeyup="mdUpdate(this.id, 'start-desc-out')">
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+                    </textarea>
                 </div>
                 <div class="edit-child">
                     <h3>Prerequisites</h3>
                     <label>Description: </label><br>
-                    <textarea id="prec-description"></textarea>
+                    <textarea id="prec-description" onkeyup="mdUpdate(this.id, 'prec-desc-out')"></textarea>
                 </div>
                 <div class="edit-child">
                     <h3>Installation</h3>
@@ -138,11 +141,21 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
                     </ul>
                 </section>
+                <section id="start">
+                    <h3>Getting Started</h3>
+                    <div id="start-desc-out"></div>
+                </section>
+                <section id="prerec">
+                    <h4>Prerequisites</h4>
+                    <div id="prec-desc-out"></div>
+                </section>
             </div>
         </div>
     </body>
     <script>
         mdUpdate('project-description', 'about-desc-out')
         mdUpdate('built-description', 'built-desc-out')
+        mdUpdate('started-description', 'start-desc-out')
+        mdUpdate('prec-description', 'prec-desc-out')
     </script>
 </html>
