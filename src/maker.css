@@ -59,6 +59,14 @@ h1 {
     max-width: 95%;
 }
 
+pre {
+    background-color: lightslategrey;
+    white-space: pre-wrap;
+    text-wrap: wrap;
+    padding: 5px;
+    border-radius: 4px;
+}
+
 .built-list-child {
 
 }
@@ -66,4 +74,5 @@ h1 {
 .output {
     width: 50%;
     background-color: var(--burnt-sienna);
+    padding-right: 20px;
 }
