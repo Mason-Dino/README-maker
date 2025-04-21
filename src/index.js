@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('node:path');
+const shell = require('electron').shell;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -21,6 +22,22 @@ const createWindow = () => {
 
     // Open the DevTools.
     //mainWindow.webContents.openDevTools();
+
+    mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+        // Open all external links in the default browser
+        shell.openExternal(url);
+        return { action: 'deny' }; // Prevent opening in Electron
+    });
+    
+    mainWindow.webContents.on('will-navigate', (event, url) => {
+        const currentURL = mainWindow.webContents.getURL();
+        const isExternal = new URL(url).origin !== new URL(currentURL).origin;
+    
+        if (isExternal) {
+            event.preventDefault();
+            shell.openExternal(url);
+        }
+    });
 };
 
 // This method will be called when Electron has finished
