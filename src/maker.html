@@ -156,7 +156,11 @@ Don't forget to give the project a star! Thanks again!
                 <div class="edit-child">
                     <h3>Contact</h3>
                     <label>Description: </label><br>
-                    <textarea id="contribute-description"></textarea>
+                    <textarea id="contact-description" onkeyup="mdUpdate(this.id, 'cont-desc-out')">
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)                        
+                    </textarea>
                 </div>
             </div>
             <div id="output" class="output">
@@ -218,6 +222,10 @@ Don't forget to give the project a star! Thanks again!
                     <h3>License</h3>
                     <p>Distributed under the MIT License. See <a id="license-link" href="https://opensource.org/licenses/MIT">MIT License</a> for more information.</p>
                 </section>
+                <section id="contact">
+                    <h3>Contact</h3>
+                    <div id="contact-desc-out"></div>
+                </section>
             </div>
         </div>
     </body>
@@ -230,5 +238,6 @@ Don't forget to give the project a star! Thanks again!
         mdUpdate('use-description', 'use-desc-out')
         mdUpdate('road-description', 'road-desc-out')
         mdUpdate('contribute-description', 'cont-desc-out')
+        mdUpdate('contact-description', 'contact-desc-out')
     </script>
 </html>
