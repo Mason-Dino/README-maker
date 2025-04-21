@@ -26,7 +26,7 @@ function updateBuilt() {
     for (let i = 1; i <= index; i ++) {
         console.log(document.getElementById(`built-child-${i}`))
         if (document.getElementById(`built-child-${i}`) != undefined) {
-            list += `<li><a href="${document.getElementById('built-url-' + String(i)).value}">${document.getElementById('built-name-' + String(i)).value}</a></li>`
+            list += `<li><a target='_blank' href="${document.getElementById('built-url-' + String(i)).value}">${document.getElementById('built-name-' + String(i)).value}</a></li>`
         }
     }
     document.getElementById("built-list-out").innerHTML = list;
