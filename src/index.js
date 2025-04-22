@@ -83,6 +83,7 @@ app.whenReady().then(() => {
                 }
             ]
         },
+        /*
         {
             label: 'Admin',
             submenu: [
@@ -104,6 +105,7 @@ app.whenReady().then(() => {
                 }
             ]
         }
+        */
     ];
     
     const menu = Menu.buildFromTemplate(menuTemplate);
