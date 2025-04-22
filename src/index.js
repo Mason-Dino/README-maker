@@ -1,6 +1,7 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
 const path = require('node:path');
 const shell = require('electron').shell;
+const fs = require('fs');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -115,6 +116,20 @@ app.whenReady().then(() => {
         createWindow();
         }
     });
+});
+
+ipcMain.handle('save-markdown', async (event, content) => {
+    const { canceled, filePath } = await dialog.showSaveDialog({
+        title: 'Save Markdown File',
+        defaultPath: 'output.md',
+        filters: [{ name: 'Markdown Files', extensions: ['md'] }]
+    });
+
+    if (!canceled && filePath) {
+        fs.writeFileSync(filePath, content);
+    }
+
+    return { canceled, filePath };
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common

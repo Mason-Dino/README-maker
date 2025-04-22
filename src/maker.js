@@ -101,7 +101,11 @@ ${cphrase}
     markdown = topMarkdown + markdown;
     console.log(topMarkdown)
 
-    window.electronAPI.writeFile('output.md', markdown, (err) => {
-        if (err) throw err;
-    })
+    window.electronAPI.saveFile(markdown).then(result => {
+        if (!result.canceled) {
+            console.log('File saved at:', result.filePath);
+        } else {
+            console.log('Save cancelled');
+        }
+    });
 }
