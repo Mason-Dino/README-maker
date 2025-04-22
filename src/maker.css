@@ -29,6 +29,7 @@ h1 {
 }
 
 .edit {
+    padding-left: 20px;
     width: 50%;
     background-color: var(--feldgrau);
 }
@@ -66,6 +67,7 @@ h1 {
     width: 95%;
     height: 120px;
     max-width: 95%;
+    min-width: 95%;
 }
 
 .edit-child .interior {
@@ -87,6 +89,43 @@ h1 {
 
 .edit-child .interior .right input[type="text"] {
     width: 90%;
+}
+
+.icon-add-label {
+    height: 24px;
+}
+
+.icon-add {
+    fill: black;
+    cursor: pointer;
+}
+
+.built-list-child {
+    display: flex;
+}
+
+.left-build {
+    width: 20%;
+    display: block;
+}
+
+.middle-build {
+    width: 70%;
+}
+
+.middle-build input[type="text"] {
+    width: 90%;
+}
+
+.right-build {
+    width: 10%;
+}
+
+.right-build svg {
+    fill: black;
+    cursor: pointer;
+    margin-top: 9px;
+    margin-bottom: 9px;
 }
 
 pre {
