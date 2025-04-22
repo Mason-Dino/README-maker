@@ -10,7 +10,7 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        width: 1000,
+        width: 1150,
         height: 700,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
@@ -90,6 +90,13 @@ app.whenReady().then(() => {
                         if (browserWindow) {
                             browserWindow.webContents.toggleDevTools();
                         }
+                    }
+                },
+                {
+                    label: 'Get Size',
+                    accelerator: 'Ctrl+Shift+S',
+                    click: (menuItem, browserWindow) => {
+                        console.log(browserWindow.getSize());
                     }
                 }
             ]
