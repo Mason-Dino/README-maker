@@ -24,7 +24,8 @@ function addBuiltItem() {
 }
 
 function deleteBuiltItem(id) {
-    document.getElementById(id).remove()
+    document.getElementById(id).remove();
+    updateBuilt()
 }
 
 function updateBuilt() {
