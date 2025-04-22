@@ -3,30 +3,38 @@
     --pistachio: #8acb88ff;
     --hookers-green: #648381ff;
     --davys-gray: rgb(51, 51, 56);
+
+    --robin-egg-blue: #2E8F98;
+    /*--feldgrau: #475b5aff;*/
+    --feldgrau: #E1E6E5;
+    --battleship-gray: #8d8e8eff;
+    --dim-gray: #6d6d6eff;
+    --cadet-gray: #a3a9aaff;
+    --french-gray: #bbbbbfff;
 }
 
 body {
     display: flex;
     margin: 0px;
-    background-color: var(--davys-gray);
+    background-color: var(--feldgrau);
 }
 
 h1 {
     font-family: "Roboto", sans-serif;
-    color: var(--pistachio);
+    color: var(--robin-egg-blue);
     text-align: center;
 }
 
 p {
     font-family: "Roboto", sans-serif;
-    color: var(--hookers-green);
+    color: var(--dim-gray);
     text-align: center;
 }
 
 button {
     cursor: pointer;
-    background-color: var(--pistachio);
-    color: var(--davys-gray);
+    background-color: var(--robin-egg-blue);
+    color: var(--feldgrau);
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     width: 100px;
@@ -37,5 +45,5 @@ button {
 
 .welcome {
     margin: auto;
-    background-color: var(--davys-gray);
+    background-color: var(--feldgrau);
 }
