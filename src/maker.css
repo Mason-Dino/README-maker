@@ -1,18 +1,26 @@
 :root {
     --burnt-sienna: #dd7765ff;
-    --pistachio: #8acb88ff;
+    --pistachio: #52D1DC;
     --hookers-green: #648381ff;
-    --davys-gray: rgb(51, 51, 56);
+    --davys-gray: #475B5A;
+
+
+    --robin-egg-blue: #2E8F98;
+    /*--feldgrau: #475b5aff;*/
+    --feldgrau: #E1E6E5;
+    --battleship-gray: #8d8e8eff;
+    --cadet-gray: #a3a9aaff;
+    --french-gray: #bbbbbfff;
 }
 
 body {
     margin: 0px;
-    background-color: var(--davys-gray);
+    background-color: var(--feldgrau);
 }
 
 h1 {
     font-family: "Roboto", sans-serif;
-    color: var(--pistachio);
+    color: var(--robin-egg-blue);
     text-align: center;
 }
 
@@ -22,16 +30,17 @@ h1 {
 
 .edit {
     width: 50%;
-    background-color: var(--hookers-green);
+    background-color: var(--feldgrau);
 }
 
 .edit-child {
     margin: auto;
     margin-bottom: 20px;
-    background-color: var(--pistachio);
+    background-color: var(--battleship-gray);
     border-radius: 10px;
     padding: 10px;
     width: 90%;
+    box-shadow: 3px 3px 10px black;
 }
 
 .edit-child h3 {
@@ -73,7 +82,7 @@ pre {
 
 .output {
     width: 50%;
-    background-color: var(--burnt-sienna);
+    background-color: var(--feldgrau);
     padding-right: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
