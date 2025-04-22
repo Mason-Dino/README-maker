@@ -76,12 +76,13 @@ function exportMD() {
 
     projectURL = document.getElementById('proj-url').value
     cphrase = document.getElementById('catchphrase-out').innerText;
+    logo = document.getElementById('logo-url').value
 
     topMarkdown = `
 <br/>
 <div align="center">
 <a href="${projectURL}">
-<img src="https://picsum.photos/400" alt="Logo" width="80" height="80">
+<img src="${logo}" alt="Logo" width="80" height="80">
 </a>
 <h3 align="center">ReadME Generator</h3>
 <p align="center">
