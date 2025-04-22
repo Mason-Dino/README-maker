@@ -24,6 +24,35 @@ h1 {
     text-align: center;
 }
 
+.header-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-button button {
+    display: flex;
+    background-color: var(--robin-egg-blue);
+    color: var(--feldgrau);
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    justify-content: center;
+
+    width: 10%;
+}
+
+.header-icon {
+    fill: var(--feldgrau);
+    margin-right: 3px;
+}
+
+
+
 .container {   
     display: flex;
 }
