@@ -69,6 +69,15 @@ app.whenReady().then(() => {
                 { role: 'cut' },
                 { role: 'copy' },
                 { role: 'paste' },
+                {
+                    label: 'Refresh',
+                    accelerator: 'Ctrl+Shift+R',
+                    click: (menuItem, browserWindow) => {
+                        if (browserWindow) {
+                            browserWindow.reload();
+                        }
+                    }
+                }
             ]
         },
         {
@@ -80,15 +89,6 @@ app.whenReady().then(() => {
                     click: (menuItem, browserWindow) => {
                         if (browserWindow) {
                             browserWindow.webContents.toggleDevTools();
-                        }
-                    }
-                },
-                {
-                    label: 'Refresh',
-                    accelerator: 'Ctrl+Shift+R',
-                    click: (menuItem, browserWindow) => {
-                        if (browserWindow) {
-                            browserWindow.reload();
                         }
                     }
                 }
