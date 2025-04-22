@@ -69,15 +69,11 @@ h1 {
 }
 
 pre {
-    background-color: lightslategrey;
+    background-color: var(--battleship-gray);
     white-space: pre-wrap;
     text-wrap: wrap;
     padding: 5px;
     border-radius: 4px;
-}
-
-.built-list-child {
-
 }
 
 .output {
