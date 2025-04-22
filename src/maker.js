@@ -6,11 +6,17 @@ function addBuiltItem() {
 
     buildList += `
     <div class="built-list-child" id="built-child-${index}">
-        <label for="built-name-${index}">Name:</label><input type="text" id="built-name-${index}">
-        <br>
-        <label for="built-url-${index}">URL:</label><input type="text" id="built-url-${index}">
-        <br>
-        <svg onclick="deleteBuiltItem('built-child-${index}')" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+        <div class="left-build">
+            <label for="built-name-${index}">Name:</label><br>
+            <label for="built-url-${index}">URL:</label>
+        </div>
+        <div class="middle-build">
+            <input type="text" id="built-name-${index}" onkeyup="updateBuilt()">
+            <input type="text" id="built-url-${index}" onkeyup="updateBuilt()">
+        </div>
+        <div class="right-build">
+            <svg onclick="deleteBuiltItem('built-child-${index}')" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+        </div>
     </div>
     `
 
