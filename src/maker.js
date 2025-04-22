@@ -1,5 +1,11 @@
 let index = 1;
 
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 'e') {
+        exportMD();
+    }
+});
+
 function addBuiltItem() {
     let buildList = document.getElementById("built-list").innerHTML;
     index += 1;
@@ -58,4 +64,8 @@ function linkUpdate(input, output) {
 function valueUpdate(input) {
     element = document.getElementById(input);
     element.setAttribute("value", element.value);
+}
+
+function exportMD() {
+    console.log("test")
 }
