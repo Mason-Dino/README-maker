@@ -6,8 +6,7 @@
 </a>
 <h3 align="center">ReadME Generator</h3>
 <p align="center">
-Starting a new project?
-Make a fantastic README with Readme-Maker
+Starting a new project? Make a fantastic README with Readme-Maker
 <br/>
 <br/>
 <br/>
@@ -26,7 +25,7 @@ ReadMe-Maker is a electron passed application to allow developers to make fantas
 
 Readme-Maker is uses electron on a backend with nodejs. These are the major frameworks and languages used within Readme-Maker and it allowed me to make this application that you are looking at.
 
-*   [Node.js v22.14.0](https://nodejs.org/en)
+*   [Node.js](https://nodejs.org/en)
 *   [Electron](https://www.electronforge.io/)
 *   [Marked.js](https://marked.js.org/)
 *   [Turndown](https://github.com/mixmark-io/turndown)
@@ -72,14 +71,13 @@ See the [open issues](https://github.com/Mason-Dino/README-maker/issues) for a f
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
 ## License
 
@@ -87,7 +85,6 @@ Distributed under the MIT License. See [MIT License](https://opensource.org/lice
 
 ## Contact
 
-Mason - Main Developer - mason.n.dinosaur@gmail.com
+Mason - Main Developer - [mason.n.dinosaur@gmail.com](mailto:mason.n.dinosaur@gmail.com)
 
-Project Link: [https://github.com/Mason-Dino/README-maker](https://github.com/Mason-Dino/README-maker)                        
-                    
+Project Link: [https://github.com/Mason-Dino/README-maker](https://github.com/Mason-Dino/README-maker)
