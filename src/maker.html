@@ -5,6 +5,7 @@
         <title>Markdown Editor</title>
         <link rel="stylesheet" href="maker.css" />
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
         <script src="maker.js"></script> 
     </head>
     <body>
@@ -12,11 +13,11 @@
             Readme Maker
         </h1>
         <div class="header-button">
-            <button>
+            <button onclick="exportMD()">
                 <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#e3e3e3"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
                 Export
             </button>
-            <button>
+            <button onclick="location.reload();">
                 <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#e3e3e3"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
                 Refresh
             </button>
@@ -224,7 +225,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
                 <header id="header">
                     <br/>
                         <div style="text-align: center;">
-                            <a target="_blank" href="https://github.com/ShaanCoding/ReadME-Generator">
+                            <a target="_blank">
                                 <img id="logo" src="https://picsum.photos/400" alt="Logo" width="80" height="80">
                             </a>
                             <h2 style="text-align: center;" id="title-out">ReadME Generator</h2>
@@ -239,49 +240,51 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
                             </p>
                         </div>
                 </header>
-                <section id="about">
-                    <h3>About The Project</h3>
-                    <img src="https://picsum.photos/1920/1080" id="about-img-out" style="width: 95%; height: 95;">
-                    <div id="about-desc-out"></div>
-                </section>
-                <section id="built">
-                    <h3>Built With</h3>
-                    <div id="built-desc-out"></div>
-                    <ul id="built-list-out">
-                    </ul>
-                </section>
-                <section id="start">
-                    <h3>Getting Started</h3>
-                    <div id="start-desc-out"></div>
-                </section>
-                <section id="prerec">
-                    <h4>Prerequisites</h4>
-                    <div id="prec-desc-out"></div>
-                </section>
-                <section id="install">
-                    <h4>Installation</h4>
-                    <div id="in-desc-out"></div>
-                </section>
-                <section id="usage">
-                    <h3>Usage</h3>
-                    <div id="use-desc-out"></div>
-                </section>
-                <section id="roadmap">
-                    <h3>Roadmap</h3>
-                    <div id="road-desc-out"></div>
-                </section>
-                <section id="contribute">
-                    <h3>Contributing</h3>
-                    <div id="cont-desc-out"></div>
-                </section>
-                <section id="license">
-                    <h3>License</h3>
-                    <p>Distributed under the MIT License. See <a id="license-link" href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> for more information.</p>
-                </section>
-                <section id="contact">
-                    <h3>Contact</h3>
-                    <div id="contact-desc-out"></div>
-                </section>
+                <div id="output-1">
+                    <section id="about">
+                        <h3>About The Project</h3>
+                        <img src="https://picsum.photos/1920/1080" id="about-img-out" style="width: 95%; height: 95;">
+                        <div id="about-desc-out"></div>
+                    </section>
+                    <section id="built">
+                        <h3>Built With</h3>
+                        <div id="built-desc-out"></div>
+                        <ul id="built-list-out">
+                        </ul>
+                    </section>
+                    <section id="start">
+                        <h3>Getting Started</h3>
+                        <div id="start-desc-out"></div>
+                    </section>
+                    <section id="prerec">
+                        <h4>Prerequisites</h4>
+                        <div id="prec-desc-out"></div>
+                    </section>
+                    <section id="install">
+                        <h4>Installation</h4>
+                        <div id="in-desc-out"></div>
+                    </section>
+                    <section id="usage">
+                        <h3>Usage</h3>
+                        <div id="use-desc-out"></div>
+                    </section>
+                    <section id="roadmap">
+                        <h3>Roadmap</h3>
+                        <div id="road-desc-out"></div>
+                    </section>
+                    <section id="contribute">
+                        <h3>Contributing</h3>
+                        <div id="cont-desc-out"></div>
+                    </section>
+                    <section id="license">
+                        <h3>License</h3>
+                        <p>Distributed under the MIT License. See <a id="license-link" href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> for more information.</p>
+                    </section>
+                    <section id="contact">
+                        <h3>Contact</h3>
+                        <div id="contact-desc-out"></div>
+                    </section>
+                </div>
             </div>
         </div>
     </body>

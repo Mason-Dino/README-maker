@@ -1,3 +1,5 @@
+var turndownService = new TurndownService()
+
 let index = 1;
 
 document.addEventListener('keydown', function(event) {
@@ -67,5 +69,39 @@ function valueUpdate(input) {
 }
 
 function exportMD() {
-    console.log("test")
+    html = document.getElementById('output-1').innerHTML;
+    
+    markdown = turndownService.turndown(html)
+    console.log(markdown)
+
+    projectURL = document.getElementById('proj-url').value
+    cphrase = document.getElementById('catchphrase-out').innerText;
+
+    topMarkdown = `
+<br/>
+<div align="center">
+<a href="${projectURL}">
+<img src="https://picsum.photos/400" alt="Logo" width="80" height="80">
+</a>
+<h3 align="center">ReadME Generator</h3>
+<p align="center">
+${cphrase}
+<br/>
+<br/>
+<br/>
+<a href="${projectURL}/issues/new?labels=bug&template=bug-report---.md">Report Bug .</a>
+<a href="${projectURL}/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+</p>
+</div>
+
+`
+
+    markdown = markdown.replaceAll('###', '##')
+
+    markdown = topMarkdown + markdown;
+    console.log(topMarkdown)
+
+    window.electronAPI.writeFile('output.md', markdown, (err) => {
+        if (err) throw err;
+    })
 }
