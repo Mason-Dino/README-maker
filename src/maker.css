@@ -34,7 +34,7 @@ h1 {
 }
 
 .edit-child {
-    margin: auto;
+    /*margin: auto;*/
     margin-bottom: 20px;
     background-color: var(--battleship-gray);
     border-radius: 10px;
@@ -66,6 +66,27 @@ h1 {
     width: 95%;
     height: 120px;
     max-width: 95%;
+}
+
+.edit-child .interior {
+    display: flex;
+}
+
+.edit-child .interior .left {
+    width: 30%;
+    display: block;
+}
+
+.edit-child .interior .left label {
+    height: 21px;
+}
+
+.edit-child .interior .right {
+    width: 70%;
+}
+
+.edit-child .interior .right input[type="text"] {
+    width: 90%;
 }
 
 pre {

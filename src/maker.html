@@ -13,19 +13,47 @@
             <div class="edit">
                 <div class="edit-child">
                     <h3>Config</h3>
-                    <label for="proj-url">Project URL: </label><input id="proj-url" type="text" value="https://github.com/Mason-Dino/README-maker"></label>
+                    <div class="interior">
+                        <div class="left">
+                            <label for="proj-url">Project URL: </label>
+                        </div>
+                        <div class="right">
+                            <input id="proj-url" type="text" value="https://github.com/Mason-Dino/README-maker"></label>
+                        </div>
+                    </div>
                 </div>
-                <div class="edit-child">
+                <div class="edit-child" id="title-edit">
                     <h3>Title</h3>
-                    <label for="logo-url">Logo URL: </label><input id="logo-url" type="text" onkeyup="imgUpdate(this.id, 'logo')">
-                    <br>
-                    <label for="title">Title: </label><input id="title" type="text" onkeyup="textUpdate(this.id, 'title-out')">
-                    <br>
-                    <label for="subtitle">Subtitle: </label><input id="subtitle" type="text" onkeyup="textUpdate(this.id, 'catchphrase-out')">
+                    <div class="interior">
+                        <div class="left">
+                            <label for="logo-url">Logo URL: </label>
+                            <label for="title">Title: </label>
+                            <label for="subtitle">Subtitle: </label>
+                        </div>
+                        <div class="right">
+                            <input id="logo-url" type="text" onkeyup="imgUpdate(this.id, 'logo')">
+                            <input id="title" type="text" onkeyup="textUpdate(this.id, 'title-out')">
+                            <input id="subtitle" type="text" onkeyup="textUpdate(this.id, 'catchphrase-out')">
+                        </div>
+                    </div>
+                        <!--
+                        <label for="logo-url">Logo URL: </label><input id="logo-url" type="text" onkeyup="imgUpdate(this.id, 'logo')">
+                        <br>
+                        <label for="title">Title: </label><input id="title" type="text" onkeyup="textUpdate(this.id, 'title-out')">
+                        <br>
+                        <label for="subtitle">Subtitle: </label><input id="subtitle" type="text" onkeyup="textUpdate(this.id, 'catchphrase-out')">
+                    -->
                 </div>
                 <div class="edit-child">
                     <h3>About the Project</h3>
-                    <label for="product-url">Product URL:</label><input id="product-url" type="text" onkeyup="imgUpdate(this.id, 'about-img-out')"><br>
+                    <div class="interior">
+                        <div class="left">
+                            <label for="product-url">Product URL:</label>
+                        </div>
+                        <div class="right">
+                            <input id="product-url" type="text" onkeyup="imgUpdate(this.id, 'about-img-out')"><br>
+                        </div>
+                    </div>
                     <label>Description: </label><br>
                     <textarea id="project-description" onkeyup="mdUpdate(this.id, 'about-desc-out')">
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
@@ -149,9 +177,16 @@ Don't forget to give the project a star! Thanks again!
                 </div>
                 <div class="edit-child">
                     <h3>License</h3>
-                    <label for="lice-name">License Name: </label><input type="text" id="lice-name" onkeyup="textUpdate(this.id, 'license-link')" value="MIT License">
-                    <br>
-                    <label for="lice-url">License URL: </label><input type="text" id="lice-url" onkeyup="linkUpdate(this.id, 'license-link')" value="https://opensource.org/licenses/MIT">
+                    <div class="interior">
+                        <div class="left">
+                            <label for="lice-name">License Name: </label>
+                            <label for="lice-url">License URL: </label>
+                        </div>
+                        <div class="right">
+                            <input type="text" id="lice-name" onkeyup="textUpdate(this.id, 'license-link')" value="MIT License">
+                            <input type="text" id="lice-url" onkeyup="linkUpdate(this.id, 'license-link')" value="https://opensource.org/licenses/MIT">
+                        </div>
+                    </div>
                 </div>
                 <div class="edit-child">
                     <h3>Contact</h3>
